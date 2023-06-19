@@ -1,9 +1,11 @@
+import 'package:basicapps/inkwelWidget.dart';
 import 'package:flutter/material.dart';
 
 import 'BMIAPP/BMI.dart';
 import 'MessengerUI/Messenger.dart';
 import 'LoginApp/LoginApp.dart';
 import 'ShoppApp/Pages/ShopHome.dart';
+import 'ToDoApp/moudules/todoHome.dart';
 import 'WordApp/screens/word_screen.dart';
 import 'firstApp/FirstApp.dart';
 
@@ -35,163 +37,34 @@ class _ChooseAppState extends State<ChooseApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    color: Colors.teal,
-                    width: double.infinity,
-                    child: const Center(
-                      child: Text(
-                        "First App",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25,
-                        ),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const FirstApp(),
-                          ));
-                    });
-                  },
-                ),
-              ),
+              inkwelWidget(buttomtext: "First App", screen: const FirstApp()),
               const SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    width: double.infinity,
-                    color: Colors.teal,
-                    child: const Center(
-                      child: Text(
-                        "Shop App",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ShopHome(),
-                          ));
-                    });
-                  },
-                ),
-              ),
+              inkwelWidget(buttomtext: "Shop App", screen: const ShopHome()),
               const SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    width: double.infinity,
-                    color: Colors.teal,
-                    child: const Center(
-                      child: Text(
-                        "Messenger App\n(UI)",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Messenger(),
-                          ));
-                    });
-                  },
-                ),
-              ),
+              inkwelWidget(
+                  buttomtext: "Messenger App \n(UI)",
+                  screen: const Messenger()),
               const SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    width: double.infinity,
-                    color: Colors.teal,
-                    child: const Center(
-                      child: Text(
-                        "Word App",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const WordScreen(),
-                          ));
-                    });
-                  },
-                ),
-              ),
+              inkwelWidget(buttomtext: "Word App", screen: const WordScreen()),
               const SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    width: double.infinity,
-                    color: Colors.teal,
-                    child: const Center(
-                      child: Text(
-                        "Login App",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const LoginApp(),
-                          ));
-                    });
-                  },
-                ),
-              ),
+              inkwelWidget(buttomtext: "Login App", screen: const LoginApp()),
               const SizedBox(
                 height: 20,
               ),
-              Expanded(
-                child: InkWell(
-                  child: Container(
-                    width: double.infinity,
-                    color: Colors.teal,
-                    child: const Center(
-                      child: Text(
-                        "BMI Calculator App",
-                        style: TextStyle(color: Colors.white, fontSize: 25),
-                      ),
-                    ),
-                  ),
-                  onTap: () {
-                    setState(() {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const Bmi(),
-                          ));
-                    });
-                  },
-                ),
+              inkwelWidget(
+                  buttomtext: "BMI Calculator App", screen: const Bmi()),
+              const SizedBox(
+                height: 20,
               ),
+              inkwelWidget(buttomtext: "To Do App", screen: const todoHome()),
             ],
           ),
         ),
