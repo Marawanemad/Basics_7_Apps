@@ -43,9 +43,12 @@ class CubitApp extends Cubit<CubitAppState> {
   }
 
   bool dark = true;
+  IconData icon = Icons.dark_mode;
   SwitchButton(bool value) {
     dark = value;
-    color(dark: value);
+    dark == true ? icon = Icons.dark_mode : icon = Icons.light_mode;
+
+    color(dark: dark);
 
     emit(ColorChangeState());
   }

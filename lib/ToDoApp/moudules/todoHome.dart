@@ -48,7 +48,7 @@ class todoHome extends StatelessWidget {
               actions: [
                 Switch(
                   thumbIcon: MaterialStatePropertyAll(Icon(
-                    cubit.dark == true ? Icons.dark_mode : Icons.light_mode,
+                    cubit.icon,
                     color: appBarColor,
                   )),
                   activeColor: Colors.grey,
